@@ -24,6 +24,7 @@ function updateUserOrder(productId, action){
         method:'POST',
         headers:{
             'Content-Type':'application,json'
+            'X-CSRFToken': crsftoken,
         }
         body:JSONstringify({'productId', productId, 'action':action})
     })
